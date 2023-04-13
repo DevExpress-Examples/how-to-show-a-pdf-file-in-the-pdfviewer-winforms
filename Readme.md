@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# How to show a PDF File in the WinForms PDF Viewer
+# How to Show a PDF File in the WinForms PDF Viewer
 
 The following example illustrates how to load an existing PDF file into the [WinForms PDFViewer](https://www.devexpress.com/products/net/controls/winforms/pdf-viewer/) control by the [PdfViewer.LoadDocument](https://docs.devexpress.com/windowsforms/devexpress.xtrapdfviewer.pdfviewer.loaddocument.overloads) method call.
 
