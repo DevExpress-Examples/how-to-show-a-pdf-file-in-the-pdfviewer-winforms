@@ -6,13 +6,24 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [Form1.cs](./CS/PdfViewerSample/Form1.cs) (VB: [Form1.vb](./VB/PdfViewerSample/Form1.vb))
+
 <!-- default file list end -->
-# How to show a PDF file using the PdfViewer control
+
+# How to show a PDF file in the WinForms PDF Viewer
+
+The following example illustrates how to load an existing PDF file into the [WinForms PDFViewer](https://www.devexpress.com/products/net/controls/winforms/pdf-viewer/) control by the [PdfViewer.LoadDocument](https://docs.devexpress.com/windowsforms/devexpress.xtrapdfviewer.pdfviewer.loaddocument.overloads) method call.
+
+# Files to Look at
+
+* [Form1.cs](./CS/PdfViewerSample/Form1.cs) (VB: [Form1.vb](./VB/PdfViewerSample/Form1.vb))
+
+# Documentation
+
+[PDF Viewer Examples](https://docs.devexpress.com/WindowsForms/10964/controls-and-libraries/pdf-viewer/examples)
+
+# More Examples
 
 
-<p>The following example illustrates how to load an existing PDF file into the <a href="https://www.devexpress.com/products/net/controls/winforms/pdf-viewer/">WinForms PDFViewer</a> control at runtime.<br />To do this, call the <a href="https://documentation.devexpress.com/#windowsforms/DevExpressXtraPdfViewerPdfViewer_LoadDocumenttopic">PdfViewer.LoadDocument </a> method. </p>
 
-<br/>
 
 
