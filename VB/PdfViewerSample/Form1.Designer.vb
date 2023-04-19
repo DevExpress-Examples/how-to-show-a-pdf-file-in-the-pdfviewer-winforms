@@ -34,19 +34,15 @@ Namespace PdfViewerSample
         ''' </summary>
         Private Sub InitializeComponent()
             Me.components = New System.ComponentModel.Container()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PdfViewerSample.Form1))
             Me.pdfViewer1 = New DevExpress.XtraPdfViewer.PdfViewer()
             Me.ribbonControl1 = New DevExpress.XtraBars.Ribbon.RibbonControl()
-            Me.pdfBarController1 = New DevExpress.XtraPdfViewer.Bars.PdfBarController()
-            Me.pdfFileRibbonPageGroup1 = New DevExpress.XtraPdfViewer.Bars.PdfFileRibbonPageGroup()
-            Me.pdfRibbonPage1 = New DevExpress.XtraPdfViewer.Bars.PdfRibbonPage()
             Me.pdfFileOpenBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfFileOpenBarItem()
             Me.pdfFileSaveAsBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfFileSaveAsBarItem()
             Me.pdfFilePrintBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfFilePrintBarItem()
-            Me.pdfNavigationRibbonPageGroup1 = New DevExpress.XtraPdfViewer.Bars.PdfNavigationRibbonPageGroup()
             Me.pdfPreviousPageBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfPreviousPageBarItem()
             Me.pdfNextPageBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfNextPageBarItem()
             Me.pdfFindTextBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfFindTextBarItem()
-            Me.pdfZoomRibbonPageGroup1 = New DevExpress.XtraPdfViewer.Bars.PdfZoomRibbonPageGroup()
             Me.pdfZoomOutBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoomOutBarItem()
             Me.pdfZoomInBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoomInBarItem()
             Me.pdfExactZoomListBarSubItem1 = New DevExpress.XtraPdfViewer.Bars.PdfExactZoomListBarSubItem()
@@ -64,10 +60,18 @@ Namespace PdfViewerSample
             Me.pdfSetPageLevelZoomModeCheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfSetPageLevelZoomModeCheckItem()
             Me.pdfSetFitWidthZoomModeCheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfSetFitWidthZoomModeCheckItem()
             Me.pdfSetFitVisibleZoomModeCheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfSetFitVisibleZoomModeCheckItem()
-            Me.pdfFormDataBarPageGroup1 = New DevExpress.XtraPdfViewer.Bars.PdfFormDataBarPageGroup()
-            Me.pdfFormDataRibbonPage1 = New DevExpress.XtraPdfViewer.Bars.PdfFormDataRibbonPage()
             Me.pdfExportFormDataBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfExportFormDataBarItem()
             Me.pdfImportFormDataBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfImportFormDataBarItem()
+            Me.barButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
+            Me.barButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
+            Me.btnClose = New DevExpress.XtraBars.BarButtonItem()
+            Me.pdfRibbonPage1 = New DevExpress.XtraPdfViewer.Bars.PdfRibbonPage()
+            Me.pdfFileRibbonPageGroup1 = New DevExpress.XtraPdfViewer.Bars.PdfFileRibbonPageGroup()
+            Me.pdfNavigationRibbonPageGroup1 = New DevExpress.XtraPdfViewer.Bars.PdfNavigationRibbonPageGroup()
+            Me.pdfZoomRibbonPageGroup1 = New DevExpress.XtraPdfViewer.Bars.PdfZoomRibbonPageGroup()
+            Me.pdfFormDataRibbonPage1 = New DevExpress.XtraPdfViewer.Bars.PdfFormDataRibbonPage()
+            Me.pdfFormDataBarPageGroup1 = New DevExpress.XtraPdfViewer.Bars.PdfFormDataBarPageGroup()
+            Me.pdfBarController1 = New DevExpress.XtraPdfViewer.Bars.PdfBarController(Me.components)
             CType((Me.ribbonControl1), System.ComponentModel.ISupportInitialize).BeginInit()
             CType((Me.pdfBarController1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
@@ -75,63 +79,27 @@ Namespace PdfViewerSample
             ' pdfViewer1
             ' 
             Me.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-            Me.pdfViewer1.Location = New System.Drawing.Point(0, 141)
+            Me.pdfViewer1.Location = New System.Drawing.Point(0, 310)
+            Me.pdfViewer1.Margin = New System.Windows.Forms.Padding(6)
+            Me.pdfViewer1.MenuManager = Me.ribbonControl1
             Me.pdfViewer1.Name = "pdfViewer1"
-            Me.pdfViewer1.Size = New System.Drawing.Size(765, 388)
+            Me.pdfViewer1.Size = New System.Drawing.Size(1530, 707)
             Me.pdfViewer1.TabIndex = 0
             ' 
             ' ribbonControl1
             ' 
+            Me.ribbonControl1.EmptyAreaImageOptions.ImagePadding = New System.Windows.Forms.Padding(120, 116, 120, 116)
             Me.ribbonControl1.ExpandCollapseItem.Id = 0
-            Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.pdfFileOpenBarItem1, Me.pdfFileSaveAsBarItem1, Me.pdfFilePrintBarItem1, Me.pdfPreviousPageBarItem1, Me.pdfNextPageBarItem1, Me.pdfFindTextBarItem1, Me.pdfZoomOutBarItem1, Me.pdfZoomInBarItem1, Me.pdfExactZoomListBarSubItem1, Me.pdfZoom10CheckItem1, Me.pdfZoom25CheckItem1, Me.pdfZoom50CheckItem1, Me.pdfZoom75CheckItem1, Me.pdfZoom100CheckItem1, Me.pdfZoom125CheckItem1, Me.pdfZoom150CheckItem1, Me.pdfZoom200CheckItem1, Me.pdfZoom400CheckItem1, Me.pdfZoom500CheckItem1, Me.pdfSetActualSizeZoomModeCheckItem1, Me.pdfSetPageLevelZoomModeCheckItem1, Me.pdfSetFitWidthZoomModeCheckItem1, Me.pdfSetFitVisibleZoomModeCheckItem1, Me.pdfExportFormDataBarItem1, Me.pdfImportFormDataBarItem1})
+            Me.ribbonControl1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.ribbonControl1.ExpandCollapseItem, Me.pdfFileOpenBarItem1, Me.pdfFileSaveAsBarItem1, Me.pdfFilePrintBarItem1, Me.pdfPreviousPageBarItem1, Me.pdfNextPageBarItem1, Me.pdfFindTextBarItem1, Me.pdfZoomOutBarItem1, Me.pdfZoomInBarItem1, Me.pdfExactZoomListBarSubItem1, Me.pdfZoom10CheckItem1, Me.pdfZoom25CheckItem1, Me.pdfZoom50CheckItem1, Me.pdfZoom75CheckItem1, Me.pdfZoom100CheckItem1, Me.pdfZoom125CheckItem1, Me.pdfZoom150CheckItem1, Me.pdfZoom200CheckItem1, Me.pdfZoom400CheckItem1, Me.pdfZoom500CheckItem1, Me.pdfSetActualSizeZoomModeCheckItem1, Me.pdfSetPageLevelZoomModeCheckItem1, Me.pdfSetFitWidthZoomModeCheckItem1, Me.pdfSetFitVisibleZoomModeCheckItem1, Me.pdfExportFormDataBarItem1, Me.pdfImportFormDataBarItem1, Me.barButtonItem1, Me.barButtonItem2, Me.btnClose})
             Me.ribbonControl1.Location = New System.Drawing.Point(0, 0)
-            Me.ribbonControl1.MaxItemId = 26
+            Me.ribbonControl1.Margin = New System.Windows.Forms.Padding(12, 12, 12, 12)
+            Me.ribbonControl1.MaxItemId = 29
             Me.ribbonControl1.Name = "ribbonControl1"
+            Me.ribbonControl1.OptionsMenuMinWidth = 1320
             Me.ribbonControl1.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.pdfRibbonPage1, Me.pdfFormDataRibbonPage1})
             Me.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010
-            Me.ribbonControl1.Size = New System.Drawing.Size(765, 141)
+            Me.ribbonControl1.Size = New System.Drawing.Size(1530, 310)
             Me.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above
-            ' 
-            ' pdfBarController1
-            ' 
-            Me.pdfBarController1.BarItems.Add(Me.pdfFileOpenBarItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfFileSaveAsBarItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfFilePrintBarItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfPreviousPageBarItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfNextPageBarItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfFindTextBarItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfZoomOutBarItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfZoomInBarItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfExactZoomListBarSubItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfZoom10CheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfZoom25CheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfZoom50CheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfZoom75CheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfZoom100CheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfZoom125CheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfZoom150CheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfZoom200CheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfZoom400CheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfZoom500CheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfSetActualSizeZoomModeCheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfSetPageLevelZoomModeCheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfSetFitWidthZoomModeCheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfSetFitVisibleZoomModeCheckItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfExportFormDataBarItem1)
-            Me.pdfBarController1.BarItems.Add(Me.pdfImportFormDataBarItem1)
-            Me.pdfBarController1.Control = Me.pdfViewer1
-            ' 
-            ' pdfFileRibbonPageGroup1
-            ' 
-            Me.pdfFileRibbonPageGroup1.ItemLinks.Add(Me.pdfFileOpenBarItem1)
-            Me.pdfFileRibbonPageGroup1.ItemLinks.Add(Me.pdfFileSaveAsBarItem1)
-            Me.pdfFileRibbonPageGroup1.ItemLinks.Add(Me.pdfFilePrintBarItem1)
-            Me.pdfFileRibbonPageGroup1.Name = "pdfFileRibbonPageGroup1"
-            ' 
-            ' pdfRibbonPage1
-            ' 
-            Me.pdfRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.pdfFileRibbonPageGroup1, Me.pdfNavigationRibbonPageGroup1, Me.pdfZoomRibbonPageGroup1})
-            Me.pdfRibbonPage1.Name = "pdfRibbonPage1"
             ' 
             ' pdfFileOpenBarItem1
             ' 
@@ -151,13 +119,6 @@ Namespace PdfViewerSample
             Me.pdfFilePrintBarItem1.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P))
             Me.pdfFilePrintBarItem1.Name = "pdfFilePrintBarItem1"
             ' 
-            ' pdfNavigationRibbonPageGroup1
-            ' 
-            Me.pdfNavigationRibbonPageGroup1.ItemLinks.Add(Me.pdfPreviousPageBarItem1)
-            Me.pdfNavigationRibbonPageGroup1.ItemLinks.Add(Me.pdfNextPageBarItem1)
-            Me.pdfNavigationRibbonPageGroup1.ItemLinks.Add(Me.pdfFindTextBarItem1)
-            Me.pdfNavigationRibbonPageGroup1.Name = "pdfNavigationRibbonPageGroup1"
-            ' 
             ' pdfPreviousPageBarItem1
             ' 
             Me.pdfPreviousPageBarItem1.Id = 4
@@ -173,13 +134,6 @@ Namespace PdfViewerSample
             Me.pdfFindTextBarItem1.Id = 6
             Me.pdfFindTextBarItem1.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F))
             Me.pdfFindTextBarItem1.Name = "pdfFindTextBarItem1"
-            ' 
-            ' pdfZoomRibbonPageGroup1
-            ' 
-            Me.pdfZoomRibbonPageGroup1.ItemLinks.Add(Me.pdfZoomOutBarItem1)
-            Me.pdfZoomRibbonPageGroup1.ItemLinks.Add(Me.pdfZoomInBarItem1)
-            Me.pdfZoomRibbonPageGroup1.ItemLinks.Add(Me.pdfExactZoomListBarSubItem1)
-            Me.pdfZoomRibbonPageGroup1.Name = "pdfZoomRibbonPageGroup1"
             ' 
             ' pdfZoomOutBarItem1
             ' 
@@ -268,17 +222,6 @@ Namespace PdfViewerSample
             Me.pdfSetFitVisibleZoomModeCheckItem1.Id = 23
             Me.pdfSetFitVisibleZoomModeCheckItem1.Name = "pdfSetFitVisibleZoomModeCheckItem1"
             ' 
-            ' pdfFormDataBarPageGroup1
-            ' 
-            Me.pdfFormDataBarPageGroup1.ItemLinks.Add(Me.pdfExportFormDataBarItem1)
-            Me.pdfFormDataBarPageGroup1.ItemLinks.Add(Me.pdfImportFormDataBarItem1)
-            Me.pdfFormDataBarPageGroup1.Name = "pdfFormDataBarPageGroup1"
-            ' 
-            ' pdfFormDataRibbonPage1
-            ' 
-            Me.pdfFormDataRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.pdfFormDataBarPageGroup1})
-            Me.pdfFormDataRibbonPage1.Name = "pdfFormDataRibbonPage1"
-            ' 
             ' pdfExportFormDataBarItem1
             ' 
             Me.pdfExportFormDataBarItem1.Id = 24
@@ -289,16 +232,113 @@ Namespace PdfViewerSample
             Me.pdfImportFormDataBarItem1.Id = 25
             Me.pdfImportFormDataBarItem1.Name = "pdfImportFormDataBarItem1"
             ' 
+            ' barButtonItem1
+            ' 
+            Me.barButtonItem1.Caption = "Load from a File"
+            Me.barButtonItem1.Id = 26
+            Me.barButtonItem1.ImageOptions.SvgImage = CType((resources.GetObject("barButtonItem1.ImageOptions.SvgImage")), DevExpress.Utils.Svg.SvgImage)
+            Me.barButtonItem1.Name = "barButtonItem1"
+            AddHandler Me.barButtonItem1.ItemClick, New DevExpress.XtraBars.ItemClickEventHandler(AddressOf Me.barButtonItem1_ItemClick)
+            ' 
+            ' barButtonItem2
+            ' 
+            Me.barButtonItem2.Caption = "Load from a Stream"
+            Me.barButtonItem2.Id = 27
+            Me.barButtonItem2.ImageOptions.SvgImage = CType((resources.GetObject("barButtonItem2.ImageOptions.SvgImage")), DevExpress.Utils.Svg.SvgImage)
+            Me.barButtonItem2.Name = "barButtonItem2"
+            AddHandler Me.barButtonItem2.ItemClick, New DevExpress.XtraBars.ItemClickEventHandler(AddressOf Me.barButtonItem2_ItemClick)
+            ' 
+            ' btnClose
+            ' 
+            Me.btnClose.Caption = "Close Document"
+            Me.btnClose.Id = 28
+            Me.btnClose.ImageOptions.SvgImage = CType((resources.GetObject("btnClose.ImageOptions.SvgImage")), DevExpress.Utils.Svg.SvgImage)
+            Me.btnClose.Name = "btnClose"
+            AddHandler Me.btnClose.ItemClick, New DevExpress.XtraBars.ItemClickEventHandler(AddressOf Me.btnClose_ItemClick)
+            ' 
+            ' pdfRibbonPage1
+            ' 
+            Me.pdfRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.pdfFileRibbonPageGroup1, Me.pdfNavigationRibbonPageGroup1, Me.pdfZoomRibbonPageGroup1})
+            Me.pdfRibbonPage1.Name = "pdfRibbonPage1"
+            ' 
+            ' pdfFileRibbonPageGroup1
+            ' 
+            Me.pdfFileRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
+            Me.pdfFileRibbonPageGroup1.ItemLinks.Add(Me.pdfFileSaveAsBarItem1)
+            Me.pdfFileRibbonPageGroup1.ItemLinks.Add(Me.pdfFilePrintBarItem1)
+            Me.pdfFileRibbonPageGroup1.ItemLinks.Add(Me.barButtonItem1)
+            Me.pdfFileRibbonPageGroup1.ItemLinks.Add(Me.barButtonItem2)
+            Me.pdfFileRibbonPageGroup1.ItemLinks.Add(Me.btnClose)
+            Me.pdfFileRibbonPageGroup1.Name = "pdfFileRibbonPageGroup1"
+            ' 
+            ' pdfNavigationRibbonPageGroup1
+            ' 
+            Me.pdfNavigationRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
+            Me.pdfNavigationRibbonPageGroup1.ItemLinks.Add(Me.pdfPreviousPageBarItem1)
+            Me.pdfNavigationRibbonPageGroup1.ItemLinks.Add(Me.pdfNextPageBarItem1)
+            Me.pdfNavigationRibbonPageGroup1.ItemLinks.Add(Me.pdfFindTextBarItem1)
+            Me.pdfNavigationRibbonPageGroup1.Name = "pdfNavigationRibbonPageGroup1"
+            ' 
+            ' pdfZoomRibbonPageGroup1
+            ' 
+            Me.pdfZoomRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
+            Me.pdfZoomRibbonPageGroup1.ItemLinks.Add(Me.pdfZoomOutBarItem1)
+            Me.pdfZoomRibbonPageGroup1.ItemLinks.Add(Me.pdfZoomInBarItem1)
+            Me.pdfZoomRibbonPageGroup1.ItemLinks.Add(Me.pdfExactZoomListBarSubItem1)
+            Me.pdfZoomRibbonPageGroup1.Name = "pdfZoomRibbonPageGroup1"
+            ' 
+            ' pdfFormDataRibbonPage1
+            ' 
+            Me.pdfFormDataRibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.pdfFormDataBarPageGroup1})
+            Me.pdfFormDataRibbonPage1.Name = "pdfFormDataRibbonPage1"
+            ' 
+            ' pdfFormDataBarPageGroup1
+            ' 
+            Me.pdfFormDataBarPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.[False]
+            Me.pdfFormDataBarPageGroup1.ItemLinks.Add(Me.pdfExportFormDataBarItem1)
+            Me.pdfFormDataBarPageGroup1.ItemLinks.Add(Me.pdfImportFormDataBarItem1)
+            Me.pdfFormDataBarPageGroup1.Name = "pdfFormDataBarPageGroup1"
+            ' 
+            ' pdfBarController1
+            ' 
+            Me.pdfBarController1.BarItems.Add(Me.pdfFileOpenBarItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfFileSaveAsBarItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfFilePrintBarItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfPreviousPageBarItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfNextPageBarItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfFindTextBarItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfZoomOutBarItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfZoomInBarItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfExactZoomListBarSubItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfZoom10CheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfZoom25CheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfZoom50CheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfZoom75CheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfZoom100CheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfZoom125CheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfZoom150CheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfZoom200CheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfZoom400CheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfZoom500CheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfSetActualSizeZoomModeCheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfSetPageLevelZoomModeCheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfSetFitWidthZoomModeCheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfSetFitVisibleZoomModeCheckItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfExportFormDataBarItem1)
+            Me.pdfBarController1.BarItems.Add(Me.pdfImportFormDataBarItem1)
+            Me.pdfBarController1.Control = Me.pdfViewer1
+            ' 
             ' Form1
             ' 
-            Me.AutoScaleDimensions = New System.Drawing.SizeF(6F, 13F)
+            Me.AutoScaleDimensions = New System.Drawing.SizeF(12F, 25F)
             Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-            Me.ClientSize = New System.Drawing.Size(765, 529)
+            Me.ClientSize = New System.Drawing.Size(1530, 1017)
             Me.Controls.Add(Me.pdfViewer1)
             Me.Controls.Add(Me.ribbonControl1)
+            Me.Margin = New System.Windows.Forms.Padding(6)
             Me.Name = "Form1"
-            Me.Text = "Form1"
-            AddHandler Me.Load, New System.EventHandler(AddressOf Me.Form1_Load)
+            Me.Ribbon = Me.ribbonControl1
+            Me.Text = "PDF Viewer"
             CType((Me.ribbonControl1), System.ComponentModel.ISupportInitialize).EndInit()
             CType((Me.pdfBarController1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
@@ -373,5 +413,11 @@ Namespace PdfViewerSample
         Private pdfFormDataBarPageGroup1 As DevExpress.XtraPdfViewer.Bars.PdfFormDataBarPageGroup
 
         Private pdfBarController1 As DevExpress.XtraPdfViewer.Bars.PdfBarController
+
+        Private barButtonItem1 As DevExpress.XtraBars.BarButtonItem
+
+        Private barButtonItem2 As DevExpress.XtraBars.BarButtonItem
+
+        Private btnClose As DevExpress.XtraBars.BarButtonItem
     End Class
 End Namespace
