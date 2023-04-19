@@ -6,7 +6,7 @@
 
 # How to Show a PDF File in the WinForms PDF Viewer
 
-The following example illustrates how to load an existing PDF file into the [WinForms PDFViewer](https://www.devexpress.com/products/net/controls/winforms/pdf-viewer/) control by the [PdfViewer.LoadDocument](https://docs.devexpress.com/windowsforms/devexpress.xtrapdfviewer.pdfviewer.loaddocument.overloads) method call.
+The following example illustrates how to load an existing PDF file into the [WinForms PDFViewer](https://www.devexpress.com/products/net/controls/winforms/pdf-viewer/) control by the [PdfViewer.LoadDocument](https://docs.devexpress.com/windowsforms/devexpress.xtrapdfviewer.pdfviewer.loaddocument.overloads) method call. Use the corresponding ribbon buttons to load a document from a file or from a stream.
 
 # Files to Look at
 
@@ -14,10 +14,7 @@ The following example illustrates how to load an existing PDF file into the [Win
 
 # Documentation
 
-[PDF Viewer Examples](https://docs.devexpress.com/WindowsForms/10964/controls-and-libraries/pdf-viewer/examples)
+* [PDF Viewer Examples](https://docs.devexpress.com/WindowsForms/10964/controls-and-libraries/pdf-viewer/examples)
 
-# More Examples
-
-[How to: Load a PDF File from a Stream](https://github.com/DevExpress-Examples/how-to-load-a-pdf-file-from-a-stream)
 
 
