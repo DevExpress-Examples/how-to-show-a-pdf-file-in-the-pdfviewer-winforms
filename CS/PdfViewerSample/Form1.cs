@@ -11,14 +11,15 @@ namespace PdfViewerSample
             InitializeComponent();
         }
 
-        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnLoadFile_ItemClick(object sender, ItemClickEventArgs e)
         {
             this.pdfViewer1.LoadDocument(@"..\..\Report.pdf");
         }
-
-        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        FileStream stream;
+        private void btnLoadStream_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FileStream stream = new FileStream(@"..\..\Report.pdf", FileMode.Open);
+            if (stream == null)
+                stream = new FileStream(@"..\..\Report2.pdf", FileMode.Open);
             pdfViewer1.LoadDocument(stream);
         }
 

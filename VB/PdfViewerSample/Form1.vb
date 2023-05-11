@@ -10,16 +10,18 @@ Namespace PdfViewerSample
             InitializeComponent()
         End Sub
 
-        Private Sub barButtonItem1_ItemClick(ByVal sender As Object, ByVal e As ItemClickEventArgs)
+        Private Sub btnLoadFile_ItemClick(ByVal sender As Object, ByVal e As ItemClickEventArgs) Handles btnLoadFile.ItemClick
             pdfViewer1.LoadDocument("..\..\Report.pdf")
         End Sub
-
-        Private Sub barButtonItem2_ItemClick(ByVal sender As Object, ByVal e As ItemClickEventArgs)
-            Dim stream As FileStream = New FileStream("..\..\Report.pdf", FileMode.Open)
+        Dim stream As FileStream
+        Private Sub btnLoadStream_ItemClick(ByVal sender As Object, ByVal e As ItemClickEventArgs) Handles btnLoadStream.ItemClick
+            If stream Is Nothing Then
+                stream = New FileStream("..\..\Report2.pdf", FileMode.Open)
+            End If
             pdfViewer1.LoadDocument(stream)
         End Sub
 
-        Private Sub btnClose_ItemClick(ByVal sender As Object, ByVal e As ItemClickEventArgs)
+        Private Sub btnClose_ItemClick(ByVal sender As Object, ByVal e As ItemClickEventArgs) Handles btnClose.ItemClick
             pdfViewer1.CloseDocument()
         End Sub
     End Class

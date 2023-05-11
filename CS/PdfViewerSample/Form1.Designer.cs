@@ -61,8 +61,8 @@ namespace PdfViewerSample {
             this.pdfSetFitVisibleZoomModeCheckItem1 = new DevExpress.XtraPdfViewer.Bars.PdfSetFitVisibleZoomModeCheckItem();
             this.pdfExportFormDataBarItem1 = new DevExpress.XtraPdfViewer.Bars.PdfExportFormDataBarItem();
             this.pdfImportFormDataBarItem1 = new DevExpress.XtraPdfViewer.Bars.PdfImportFormDataBarItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLoadFile = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLoadStream = new DevExpress.XtraBars.BarButtonItem();
             this.btnClose = new DevExpress.XtraBars.BarButtonItem();
             this.pdfRibbonPage1 = new DevExpress.XtraPdfViewer.Bars.PdfRibbonPage();
             this.pdfFileRibbonPageGroup1 = new DevExpress.XtraPdfViewer.Bars.PdfFileRibbonPageGroup();
@@ -78,16 +78,16 @@ namespace PdfViewerSample {
             // pdfViewer1
             // 
             this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pdfViewer1.Location = new System.Drawing.Point(0, 310);
-            this.pdfViewer1.Margin = new System.Windows.Forms.Padding(6);
+            this.pdfViewer1.Location = new System.Drawing.Point(0, 193);
+            this.pdfViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pdfViewer1.MenuManager = this.ribbonControl1;
             this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.Size = new System.Drawing.Size(1530, 707);
+            this.pdfViewer1.Size = new System.Drawing.Size(892, 458);
             this.pdfViewer1.TabIndex = 0;
             // 
             // ribbonControl1
             // 
-            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(120, 116, 120, 116);
+            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(70, 74, 70, 74);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -116,19 +116,20 @@ namespace PdfViewerSample {
             this.pdfSetFitVisibleZoomModeCheckItem1,
             this.pdfExportFormDataBarItem1,
             this.pdfImportFormDataBarItem1,
-            this.barButtonItem1,
-            this.barButtonItem2,
-            this.btnClose});
+            this.btnLoadFile,
+            this.btnLoadStream,
+            this.btnClose,
+            this.ribbonControl1.SearchEditItem});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.ribbonControl1.MaxItemId = 29;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.OptionsMenuMinWidth = 1320;
+            this.ribbonControl1.OptionsMenuMinWidth = 770;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.pdfRibbonPage1,
             this.pdfFormDataRibbonPage1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(1530, 310);
+            this.ribbonControl1.Size = new System.Drawing.Size(892, 193);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Above;
             // 
             // pdfFileOpenBarItem1
@@ -276,21 +277,21 @@ namespace PdfViewerSample {
             this.pdfImportFormDataBarItem1.Id = 25;
             this.pdfImportFormDataBarItem1.Name = "pdfImportFormDataBarItem1";
             // 
-            // barButtonItem1
+            // btnLoadFile
             // 
-            this.barButtonItem1.Caption = "Load from a File";
-            this.barButtonItem1.Id = 26;
-            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            this.btnLoadFile.Caption = "Load from a File";
+            this.btnLoadFile.Id = 26;
+            this.btnLoadFile.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.btnLoadFile.Name = "btnLoadFile";
+            this.btnLoadFile.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoadFile_ItemClick);
             // 
-            // barButtonItem2
+            // btnLoadStream
             // 
-            this.barButtonItem2.Caption = "Load from a Stream";
-            this.barButtonItem2.Id = 27;
-            this.barButtonItem2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            this.btnLoadStream.Caption = "Load from a Stream";
+            this.btnLoadStream.Id = 27;
+            this.btnLoadStream.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem2.ImageOptions.SvgImage")));
+            this.btnLoadStream.Name = "btnLoadStream";
+            this.btnLoadStream.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoadStream_ItemClick);
             // 
             // btnClose
             // 
@@ -313,8 +314,8 @@ namespace PdfViewerSample {
             this.pdfFileRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.pdfFileRibbonPageGroup1.ItemLinks.Add(this.pdfFileSaveAsBarItem1);
             this.pdfFileRibbonPageGroup1.ItemLinks.Add(this.pdfFilePrintBarItem1);
-            this.pdfFileRibbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
-            this.pdfFileRibbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
+            this.pdfFileRibbonPageGroup1.ItemLinks.Add(this.btnLoadFile);
+            this.pdfFileRibbonPageGroup1.ItemLinks.Add(this.btnLoadStream);
             this.pdfFileRibbonPageGroup1.ItemLinks.Add(this.btnClose);
             this.pdfFileRibbonPageGroup1.Name = "pdfFileRibbonPageGroup1";
             // 
@@ -378,12 +379,12 @@ namespace PdfViewerSample {
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1530, 1017);
+            this.ClientSize = new System.Drawing.Size(892, 651);
             this.Controls.Add(this.pdfViewer1);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Ribbon = this.ribbonControl1;
             this.Text = "PDF Viewer";
@@ -430,8 +431,8 @@ namespace PdfViewerSample {
         private DevExpress.XtraPdfViewer.Bars.PdfFormDataRibbonPage pdfFormDataRibbonPage1;
         private DevExpress.XtraPdfViewer.Bars.PdfFormDataBarPageGroup pdfFormDataBarPageGroup1;
         private DevExpress.XtraPdfViewer.Bars.PdfBarController pdfBarController1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btnLoadFile;
+        private DevExpress.XtraBars.BarButtonItem btnLoadStream;
         private DevExpress.XtraBars.BarButtonItem btnClose;
     }
 }
